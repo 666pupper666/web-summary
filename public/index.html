@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>网页总结工具</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header class="hero">
+          <p class="eyebrow">公开网页 · 中文摘要</p>
+          <h1>网页总结工具</h1>
+          <p class="lead">输入网址，提取正文并生成中文摘要。抓取失败时，可以粘贴原文再试。</p>
+        </header>
+
+        <form id="url-form" class="form">
+          <label for="url-input">网页网址</label>
+          <div class="row">
+            <input
+              id="url-input"
+              name="url"
+              type="url"
+              inputmode="url"
+              autocomplete="url"
+              placeholder="https://example.com/article"
+              required
+            />
+            <button id="url-submit" type="submit">生成摘要</button>
+          </div>
+        </form>
+
+        <p id="status" class="status" hidden></p>
+        <p id="error" class="error" hidden></p>
+
+        <section id="paste-panel" class="paste-panel" hidden>
+          <label for="paste-input">粘贴正文</label>
+          <textarea
+            id="paste-input"
+            rows="8"
+            placeholder="把文章正文粘贴到这里，再点击下方按钮。"
+          ></textarea>
+          <button id="paste-submit" type="button">用粘贴内容总结</button>
+        </section>
+
+        <article id="result" class="result" hidden>
+          <div class="result-head">
+            <div>
+              <h2 id="result-title"></h2>
+              <a id="result-source" class="source" hidden target="_blank" rel="noopener noreferrer"></a>
+            </div>
+            <button id="copy-button" type="button">复制摘要</button>
+          </div>
+          <p id="result-summary" class="summary"></p>
+          <p id="copy-hint" class="copy-hint" hidden>已复制到剪贴板</p>
+        </article>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
