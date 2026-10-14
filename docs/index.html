@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>智读 · AI网页总结工具</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;background:#0b1220;color:#eef2ff;
+      font-family:"Microsoft YaHei",sans-serif;line-height:1.8}
+    main{max-width:1000px;margin:auto;padding:70px 24px}
+    .tag{color:#67e8f9}
+    h1{font-size:clamp(36px,7vw,64px);margin:15px 0}
+    .intro{color:#b6c2d9;font-size:20px;max-width:720px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;margin:45px 0}
+    section{background:#172238;padding:25px;border-radius:18px}
+    h2{font-size:22px;color:#67e8f9}
+    a{display:inline-block;background:#67e8f9;color:#0b1220;
+      padding:12px 24px;border-radius:10px;text-decoration:none}
+    footer{margin-top:45px;color:#94a3b8}
+  </style>
+</head>
+<body>
+<main>
+  <div class="tag">AI 编程课程 · 项目官网</div>
+  <h1>智读 · AI网页总结工具</h1>
+  <p class="intro">把长篇网页，变成清晰的中文摘要。
+    输入公开文章链接，提取正文，并利用 AI 快速整理核心内容。</p>
+  <div class="cards">
+    <section><h2>01 网页正文提取</h2>
+      <p>使用 Readability 提取文章内容，减少导航和广告干扰。</p></section>
+    <section><h2>02 AI 中文摘要</h2>
+      <p>通过后端调用 DeepSeek API，生成便于阅读的中文总结。</p></section>
+    <section><h2>03 简洁操作</h2>
+      <p>输入链接、提交请求、查看摘要，操作直观清晰。</p></section>
+  </div>
+  <a href="https://github.com/666pupper666/web-summary">
+    查看项目源代码
+  </a>
+  <footer>
+    本页是静态项目介绍页，不提供在线摘要服务。
+    完整工具需在本地启动 Node.js 服务，并配置自己的 API 密钥。
+    <br>作者：666pupper666 · 使用 GitHub Pages 发布
+  </footer>
+</main>
+</body>
+</html>
